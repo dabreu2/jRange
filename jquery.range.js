@@ -292,7 +292,7 @@
 			return (this.domNode.width() * prc) / 100;
 		},
 		isDecimal: function() {
-			return ((this.options.value + this.options.from + this.options.to).indexOf(".")===-1) ? false : true;
+			return (("" + this.options.value + this.options.from + this.options.to).indexOf(".")===-1) ? false : true;
 		},
 		positionToValue: function(pos) {
 			var value = (pos / this.domNode.width()) * this.interval;
@@ -322,7 +322,7 @@
 			} else {
 				var values = this.options.value.split(',');
 				if (pointer.hasClass('low')) {
-					this.options.value = v + ',' + values[1];
+					this.options.value = v + ',' + values[1];
 				} else {
 					this.options.value = values[0] + ',' + v;
 				}
